@@ -12,6 +12,9 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.kernelParams = [ "amdgpu.ppfeaturemask=0xffffffff" ];
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  environment.systemPackages = with pkgs; [
+    linuxKernel.packages.linux_xanmod_latest.system76-scheduler
+  ];
   chaotic.mesa-git = {
     enable = true;
     method = "replaceRuntimeDependencies";
