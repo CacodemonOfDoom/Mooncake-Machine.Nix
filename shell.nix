@@ -8,9 +8,10 @@
     };
   };
 
-  environment.systemPackages = with pkgs.fishPlugins; [
-    z
-    git-abbr
-    autopair
+  environment.systemPackages = with pkgs; [
+    oh-my-fish
+    fishPlugins.z
+    fishPlugins.git-abbr
+    fishPlugins.autopair
   ];
 }
