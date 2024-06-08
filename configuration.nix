@@ -117,7 +117,7 @@
       git
       xsel
       gh
-      edid-generator
+      rwedid
     ];
   };
 
