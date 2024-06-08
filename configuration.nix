@@ -11,7 +11,8 @@
       ./main-user.nix
       ./gaming.nix
       ./shell.nix
-    ];
+      #./X11.nix
+  ];
   # Auto System Updates
   system.autoUpgrade = {
 	enable = true;
@@ -74,6 +75,7 @@
     layout = "us";
     xkbVariant = "";
   };
+  
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -108,11 +110,14 @@
       vscodium
       mediawriter
       konsole
-      alacritty
       helix
+      pavucontrol
+      alacritty
       #GitHub
       git
+      xsel
       gh
+      edid-generator
     ];
   };
 

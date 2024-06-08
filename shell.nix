@@ -4,7 +4,7 @@
   programs.fish = {
     enable = true;
     shellAbbrs = {
-      nbuild = "sudo nixos-switch rebuild --flake /home/apricorum/nixos#default";
+      nbuild = "bash /home/apricorum/rebuild.sh";
     };
   };
 
