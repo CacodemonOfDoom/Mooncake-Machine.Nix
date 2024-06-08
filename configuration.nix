@@ -11,7 +11,7 @@
       ./main-user.nix
       ./gaming.nix
       ./shell.nix
-      #./X11.nix
+      /home/apricorum/nixos/X11.nix
   ];
   # Auto System Updates
   system.autoUpgrade = {
@@ -61,27 +61,11 @@
     LC_TIME = "it_IT.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.xserver.windowManager.i3.updateSessionEnvironment = true;
-  services.xserver.windowManager.i3.extraPackages = with pkgs; [
-    dmenu
-    i3status
-  ];  
-  services.xserver.windowManager.i3.enable = true;
-
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "";
-  };
-  
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  #hardware.pulseaudio.enable = false;
+  #hardware.pulseaudio.enable = false; 
   #security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -116,8 +100,10 @@
       #GitHub
       git
       xsel
+      autorandr
       gh
       rwedid
+      xorg.xf86videoamdgpu
     ];
   };
 

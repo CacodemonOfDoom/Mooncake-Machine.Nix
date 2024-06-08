@@ -4,7 +4,7 @@
   programs.fish = {
     enable = true;
     shellAbbrs = {
-      nbuild = "bash /home/apricorum/rebuild.sh";
+      rebuild = "bash /home/apricorum/rebuild.sh";
     };
   };
 
