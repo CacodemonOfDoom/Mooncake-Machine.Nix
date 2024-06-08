@@ -10,17 +10,8 @@
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
-  boot.kernelPackages = with pkgs;[
-    linuxKernel.packages.linux_xanmod_stable.zfs_2_1
-    linuxKernel.packages.linux_xanmod.xone
-    linuxKernel.packages.linux_xanmod.openrazer
-    linuxKernel.packages.linux_xanmod.cpupower
-    linuxKernel.packages.linux_xanmod.system76-scheduler
-    linuxPackages_latest
-
-  ];
   boot.kernelParams = [ "amdgpu.ppfeaturemask=0xffffffff" ];
-
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   chaotic.mesa-git = {
     enable = true;
     method = "replaceRuntimeDependencies";

@@ -6,7 +6,7 @@
    	};
 	nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     	chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-  	  nixos-hardware.url = "github:NixOS/nixos-hardware";
+  	  	nixos-hardware.url = "github:NixOS/nixos-hardware";
     	nix-alien.url = "github:thiagokokada/nix-alien";
     	nix-gaming.url = "github:fufexan/nix-gaming";
     	rust-overlay.url = "github:oxalica/rust-overlay";

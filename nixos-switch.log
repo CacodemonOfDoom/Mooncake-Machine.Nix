@@ -1,25 +1,11 @@
 warning: Git tree '/home/apricorum/nixos' is dirty
 building the system configuration...
 warning: Git tree '/home/apricorum/nixos' is dirty
-error:
-       … while calling the 'head' builtin
-
-         at /nix/store/8s55w0927lh3mdbkxf434zb0c5hqsz8z-source/lib/attrsets.nix:1575:11:
-
-         1574|         || pred here (elemAt values 1) (head values) then
-         1575|           head values
-             |           ^
-         1576|         else
-
-       … while evaluating the attribute 'value'
-
-         at /nix/store/8s55w0927lh3mdbkxf434zb0c5hqsz8z-source/lib/modules.nix:809:9:
-
-          808|     in warnDeprecation opt //
-          809|       { value = builtins.addErrorContext "while evaluating the option `${showOption loc}':" value;
-             |         ^
-          810|         inherit (res.defsFinal') highestPrio;
-
-       (stack trace truncated; use '--show-trace' to show the full trace)
-
-       error: value is a list while a set was expected
+trace: warning: The option `services.xserver.xkbVariant' defined in `/nix/store/kxcpvliimllgnb8jjvz434za9figh642-source/configuration.nix' has been renamed to `services.xserver.xkb.variant'.
+trace: warning: The option `services.xserver.layout' defined in `/nix/store/kxcpvliimllgnb8jjvz434za9figh642-source/configuration.nix' has been renamed to `services.xserver.xkb.layout'.
+trace: warning: The option `services.xserver.displayManager.autoLogin' defined in `/nix/store/kxcpvliimllgnb8jjvz434za9figh642-source/configuration.nix' has been renamed to `services.displayManager.autoLogin'.
+activating the configuration...
+setting up /etc...
+reloading user units for apricorum...
+restarting sysinit-reactivation.target
+the following new units were started: sysinit-reactivation.target, systemd-tmpfiles-resetup.service
