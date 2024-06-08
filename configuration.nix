@@ -106,6 +106,7 @@
 	    vscodium
       mediawriter
       konsole
+      lact
       #GitHub
       git
       gh
@@ -166,7 +167,14 @@
     experimental-features = nix-command flakes
   '';
   };
-
+  systemd.services.lact = {
+    serviceConfig = {
+        Type = "simple";
+        User = "apricorum";
+        ExecStart  = "${pkgs.lact}/bin/lact daemon"; 
+        };
+        wantedBy = [ "multi-user.target" ];
+  };
   # Dynamic libraries
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
