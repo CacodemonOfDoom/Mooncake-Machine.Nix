@@ -1,9 +1,9 @@
 warning: Git tree '/home/apricorum/nixos' is dirty
 building the system configuration...
 warning: Git tree '/home/apricorum/nixos' is dirty
-trace: warning: The option `services.xserver.xkbVariant' defined in `/nix/store/hlx97xax12r3bk13k66322wbvvmd94n0-source/configuration.nix' has been renamed to `services.xserver.xkb.variant'.
-trace: warning: The option `services.xserver.layout' defined in `/nix/store/hlx97xax12r3bk13k66322wbvvmd94n0-source/configuration.nix' has been renamed to `services.xserver.xkb.layout'.
-trace: warning: The option `services.xserver.displayManager.autoLogin' defined in `/nix/store/hlx97xax12r3bk13k66322wbvvmd94n0-source/configuration.nix' has been renamed to `services.displayManager.autoLogin'.
+trace: warning: The option `services.xserver.xkbVariant' defined in `/nix/store/hl8r04lp763qdqsqix8v3s2pxs1bqkb7-source/configuration.nix' has been renamed to `services.xserver.xkb.variant'.
+trace: warning: The option `services.xserver.layout' defined in `/nix/store/hl8r04lp763qdqsqix8v3s2pxs1bqkb7-source/configuration.nix' has been renamed to `services.xserver.xkb.layout'.
+trace: warning: The option `services.xserver.displayManager.autoLogin' defined in `/nix/store/hl8r04lp763qdqsqix8v3s2pxs1bqkb7-source/configuration.nix' has been renamed to `services.displayManager.autoLogin'.
 stopping the following units: accounts-daemon.service
 activating the configuration...
 setting up /etc...
