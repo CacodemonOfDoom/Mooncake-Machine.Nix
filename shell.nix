@@ -13,5 +13,6 @@
     fishPlugins.z
     fishPlugins.git-abbr
     fishPlugins.autopair
+    fishPlugins.bobthefisher
   ];
 }
