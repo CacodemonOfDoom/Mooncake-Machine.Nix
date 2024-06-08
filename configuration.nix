@@ -11,8 +11,6 @@
       ./main-user.nix
       ./gaming.nix
       ./shell.nix
-      ./gnome.nix
-      ./Services/lact.nix
     ];
   # Auto System Updates
   system.autoUpgrade = {
@@ -64,10 +62,12 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.windowManager.i3.updateSessionEnvironment = true;
+  services.xserver.windowManager.i3.extraPackages = with pkgs; [
+    dmenu
+    i3status
+  ];  
+  services.xserver.windowManager.i3.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -79,8 +79,8 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
+  #hardware.pulseaudio.enable = false;
+  #security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -103,10 +103,13 @@
     description = "apricorum";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      lact
       vesktop
-	    vscodium
+      vscodium
       mediawriter
       konsole
+      alacritty
+      helix
       #GitHub
       git
       gh

@@ -11,6 +11,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   chaotic.mesa-git = {
     enable = true;
@@ -18,18 +19,20 @@
     fallbackSpecialisation = false;
   };
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/c8256a68-2c48-4673-b0ee-0f338b17ac35";
+    fileSystems."/" =
+    { device = "/dev/disk/by-uuid/ff8431b4-90e5-4c01-8b22-59aa58849db3";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/9438-6F6D";
+    { device = "/dev/disk/by-uuid/2306-BF38";
       fsType = "vfat";
-      options = [ "fmask=0022" "dmask=0022" ];
+      options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  swapDevices = [ ];
+  swapDevices =
+    [ { device = "/dev/disk/by-uuid/0c46cbfb-9705-4665-bfd6-8400e409c5df"; }
+    ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
