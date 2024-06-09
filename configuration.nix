@@ -91,21 +91,10 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       home-manager
-      lact
       vesktop
-      vscodium
       mediawriter
-      konsole
-      helix
-      alacritty
-      pavucontrol
       #GitHub
-      git
-      yazi
       xsel
-      autorandr
-      gh
-      taskwarrior3
     ];
   };
 
