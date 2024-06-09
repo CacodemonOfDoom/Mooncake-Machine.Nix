@@ -8,6 +8,11 @@
     	rust-overlay.url = "github:oxalica/rust-overlay";
     	nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   #  wrapper-manager = {
   #    url = "github:viperML/wrapper-manager";
   #  };
@@ -19,6 +24,7 @@
       modules = [
         ./configuration.nix
 	      chaotic.nixosModules.default
+        inputs.home-manager.nixosModules.default
       ];
     };
   };

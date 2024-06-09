@@ -12,7 +12,8 @@
       /home/apricorum/nixos/gaming.nix
       /home/apricorum/nixos/shell.nix
       /home/apricorum/nixos/X11.nix
-  ];
+      inputs.home-manager.nixosModules.default
+    ];
   # Auto System Updates
   system.autoUpgrade = {
 	enable = true;
@@ -158,6 +159,12 @@
   # Dynamic libraries
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
-
   ];
+  # Home Manager
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      "apricorum" = import /home/apricorum/nixos/home.nix;
+    };
+  };
 }
