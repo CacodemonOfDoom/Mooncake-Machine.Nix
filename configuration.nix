@@ -99,6 +99,7 @@
       alacritty
       #GitHub
       git
+      yazi
       xsel
       autorandr
       gh
