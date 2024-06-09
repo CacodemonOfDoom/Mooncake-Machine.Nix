@@ -90,6 +90,7 @@
     description = "apricorum";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      home-manager
       lact
       vesktop
       vscodium
