@@ -8,12 +8,12 @@
     	rust-overlay.url = "github:oxalica/rust-overlay";
     	nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
-    wrapper-manager = {
-      url = "github:viperML/wrapper-manager";
-    };
+  #  wrapper-manager = {
+  #    url = "github:viperML/wrapper-manager";
+  #  };
   };
 
-  outputs = {wrapper-manager, chaotic, self, nixpkgs, ...} @ inputs: {
+  outputs = {chaotic, self, nixpkgs, ...} @ inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;}; # this is the important part
       modules = [

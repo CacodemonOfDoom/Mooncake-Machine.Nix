@@ -7,10 +7,10 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./main-user.nix
-      ./gaming.nix
-      ./shell.nix
+      /home/apricorum/nixos/hardware-configuration.nix
+      /home/apricorum/nixos/main-user.nix
+      /home/apricorum/nixos/gaming.nix
+      /home/apricorum/nixos/shell.nix
       /home/apricorum/nixos/X11.nix
   ];
   # Auto System Updates
