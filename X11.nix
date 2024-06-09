@@ -27,6 +27,6 @@
     Option "VariableRefresh" "true"
     ''; 
   services.xserver.displayManager.setupCommands = ''
-    ${pkgs.xorg.xrandr}/bin/randr --output DP-1 --right-of DP-2 
+    ${pkgs.xorg.xrandr}/bin/xrandr --output DP-1 --primary --right-of DP-2 --scale 0.75 
   '';
 }
