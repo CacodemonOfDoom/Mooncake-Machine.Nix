@@ -104,7 +104,7 @@
       autorandr
       gh
       rwedid
-      xorg.xf86videoamdgpu
+      planify
     ];
   };
 
