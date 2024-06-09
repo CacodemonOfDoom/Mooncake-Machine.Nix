@@ -104,7 +104,7 @@
       autorandr
       gh
       rwedid
-      planify
+      python312Packages.pip
     ];
   };
 
