@@ -21,12 +21,12 @@
     xkbVariant = "";
   };
 
-  services.xserver.videoDrivers = [ "radeon" ];
-  services.xserver.deviceSection = ''
-    Option "TearFree" "true"
-    Option "VariableRefresh" "true"
-    ''; 
-  services.xserver.displayManager.setupCommands = ''
-    ${pkgs.xorg.xrandr}/bin/xrandr --output DP-1 --primary --right-of DP-2 --scale 0.75 
-  '';
+#  services.xserver.videoDrivers = [ "radeon" ];
+#  services.xserver.deviceSection = ''
+#    Option "TearFree" "true"
+#    Option "VariableRefresh" "true"
+#    ''; 
+#  services.xserver.displayManager.setupCommands = ''
+#    ${pkgs.xorg.xrandr}/bin/xrandr --output DP-1 --primary --right-of DP-2 --scale 0.75 
+#  '';
 }
