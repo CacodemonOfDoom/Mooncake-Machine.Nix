@@ -103,8 +103,7 @@
       xsel
       autorandr
       gh
-      rwedid
-      python312Packages.pip
+      taskwarrior3
     ];
   };
 
