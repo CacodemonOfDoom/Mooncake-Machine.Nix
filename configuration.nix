@@ -9,8 +9,7 @@
     [ # Include the results of the hardware scan.
       /home/apricorum/nixos/hardware-configuration.nix
       /home/apricorum/nixos/main-user.nix
-      /home/apricorum/nixos/gaming.nix
-      /home/apricorum/nixos/shell.nix
+      /home/apricorum/nixos/gaming.nix 
       /home/apricorum/nixos/X11.nix
       inputs.home-manager.nixosModules.default
     ];
@@ -151,6 +150,7 @@
   programs.nix-ld.libraries = with pkgs; [
   ];
   # Home Manager
+  programs.fish.enable = true;
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
