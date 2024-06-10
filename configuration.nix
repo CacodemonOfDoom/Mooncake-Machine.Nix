@@ -8,9 +8,9 @@
   imports =
     [ # Include the results of the hardware scan.
       /home/apricorum/nixos/hardware-configuration.nix
-      /home/apricorum/nixos/Modules/main-user.nix
+      /home/apricorum/nixos/main-user.nix
       /home/apricorum/nixos/Games/gaming.nix 
-      /home/apricorum/nixos/Modules/X11.nix
+      /home/apricorum/nixos/X11.nix
       /home/apricorum/nixos/shell.nix      
       inputs.home-manager.nixosModules.default
     ];
