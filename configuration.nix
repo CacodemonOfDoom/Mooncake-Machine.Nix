@@ -11,6 +11,7 @@
       /home/apricorum/nixos/main-user.nix
       /home/apricorum/nixos/gaming.nix 
       /home/apricorum/nixos/X11.nix
+      /home/apricorum/nixos/shell.nix
       inputs.home-manager.nixosModules.default
     ];
   # Auto System Updates
