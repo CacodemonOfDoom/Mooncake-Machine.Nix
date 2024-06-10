@@ -8,10 +8,10 @@
   imports =
     [ # Include the results of the hardware scan.
       /home/apricorum/nixos/hardware-configuration.nix
-      /home/apricorum/nixos/main-user.nix
-      /home/apricorum/nixos/gaming.nix 
-      /home/apricorum/nixos/X11.nix
-      /home/apricorum/nixos/shell.nix
+      /home/apricorum/nixos/Modules/main-user.nix
+      /home/apricorum/nixos/Games/gaming.nix 
+      /home/apricorum/nixos/Modules/X11.nix
+      /home/apricorum/nixos/shell.nix      
       inputs.home-manager.nixosModules.default
     ];
   # Auto System Updates
@@ -150,12 +150,14 @@
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
   ];
+
   # Home Manager
   programs.fish.enable = true;
+
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      "apricorum" = import /home/apricorum/nixos/home.nix;
+      "apricorum" = import /home/apricorum/nixos/Home-Manager/home.nix;
     };
   };
 }
